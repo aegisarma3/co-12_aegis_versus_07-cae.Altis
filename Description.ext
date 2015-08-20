@@ -1,0 +1,67 @@
+author = "Fuiba - Editada por Collumbus";
+
+// Overview:
+overviewText = "PMC Versus ambushes a fuel transport and liberates the most notorious criminals on Altis.";
+overviewPicture = "overview_07.paa"; // Mission screenshot
+
+// Loading:
+onLoadName = "Caesiae Maria"; // Mission name
+onLoadMission = "Ambush a fuel transport convoy and free prisoners from a temporary camp.";
+loadScreen = "aegislogo.paa"; // Loading screen pip
+
+doneKeys[] = {"co10_pmcvcro07"};
+
+minScore=0;
+avgScore=1000;
+maxScore=14000;
+
+class CfgWorlds
+{
+		// Loading texts displayed on the bottom of the loading screen (picked randomly)
+		loadingTexts[]=
+		{
+			"PMC Aegis was founded in 1997.",
+			"Stratis is of volcanic origin, with many rocks and crevices and Aegis."
+		};
+};
+
+class Header
+{
+	gameType = Coop;
+	minPlayers = 1;
+	maxPlayers = 12;
+};
+
+class CfgDebriefing
+{
+	class End1
+	{
+		title = "Mission Completed";
+		subtitle = "";
+		description = "PMC Versus has freed the most infamous criminals on Altis. What they will do with their freedom is unknown but the prison break will surely instill fear amongst the civilian population. Additionally, the AAF forces are spread thin with no reinforcements from the Greek mainland and left with a quickly diminishing fuel supply.";
+	};
+};
+
+
+class CfgSounds
+{
+	sounds[] = {scream,scream2,burn};
+	class scream
+	{
+		name = "scream";
+		sound[] = {"\Sound\scream.ogg", db+0, 1.0};
+		titles[] = {0,""};
+	};
+	class scream2
+	{
+		name = "scream2";
+		sound[] = {"\Sound\scream2.ogg", db+0, 1.0};
+		titles[] = {0,""};
+	};
+	class burn
+	{
+		name = "burn";
+		sound[] = {"\Sound\burn.ogg", db+0, 1.0};
+		titles[] = {0,""};
+	};
+};
